@@ -37,7 +37,34 @@ A backend notification system built with **Node.js**, **Express**, and **MongoDB
 
 ### Clone the Repository
 
-```bash
+
 git clone https://github.com/your-username/notification-service.git
 cd notification-service
+Install Dependencies
+npm install
+Configure Environment Variables
+Create a .env file in the root folder and add the following:
+PORT=3000
+MONGO_URI=mongodb://localhost:27017/notifications
+EMAIL=your_email@gmail.com
+EMAIL_PASS=your_gmail_app_password
+TWILIO_SID=your_twilio_account_sid
+TWILIO_TOKEN=your_twilio_auth_token
+TWILIO_PHONE=your_twilio_phone_number
+Project Structure:
+.
+├── controllers/
+│   └── notificationController.js
+├── models/
+│   └── Notification.js
+├── routes/
+│   └── notificationRoutes.js
+├── services/
+│   ├── emailService.js
+│   ├── smsService.js
+│   └── inAppService.js
+├── queues/
+│   └── notificationQueue.js
+├── server.js
+└── .env
 
